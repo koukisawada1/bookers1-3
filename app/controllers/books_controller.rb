@@ -3,6 +3,8 @@ class BooksController < ApplicationController
   def show
   	@book = Book.find(params[:id])
     @bbook = Book.new
+    @comments = @book.book_comments
+    @book_comment = BookComment.new
   end
 
   def index
